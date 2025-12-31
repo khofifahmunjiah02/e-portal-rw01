@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Portal Pemilihan RT/RW 01 Melong 2026</title>
+    <link rel="icon" type="image/png" href="logo_tps_muda_2026.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        html { scroll-behavior: smooth; }
+        .hero-gradient {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-10px); }
+        section { scroll-margin-top: 100px; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+<nav class="bg-white sticky top-0 z-50 shadow-md">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <img src="logo_tps_muda_2026.png" alt="Logo" class="h-8 md:h-10 w-auto">
+            <span class="font-black text-sm md:text-lg tracking-tighter uppercase">TPS<span class="text-red-600">MUDA</span></span>
+        </div>
+        <a href="https://wa.me/6281221518489" class="bg-green-600 text-white px-4 py-1.5 rounded-full font-bold text-[10px] md:text-sm transition shadow-md">
+            Hubungi Kami
+        </a>
+    </div>
+
+    <div class="border-t border-slate-100 bg-slate-50 md:bg-white">
+        <div class="container mx-auto">
+            <div class="flex overflow-x-auto no-scrollbar py-3 px-4 space-x-6 md:justify-center font-bold text-[10px] md:text-xs uppercase tracking-widest whitespace-nowrap">
+                <a href="#jadwal" class="text-slate-600 hover:text-red-600 flex items-center shrink-0">
+                    <i class="fas fa-calendar-alt mr-1.5 text-red-600/50 md:hidden"></i>Jadwal
+                </a>
+                <a href="#panitia" class="text-slate-600 hover:text-red-600 flex items-center shrink-0">
+                    <i class="fas fa-users mr-1.5 text-red-600/50 md:hidden"></i>Panitia
+                </a>
+                <a href="#biaya" class="text-slate-600 hover:text-red-600 flex items-center shrink-0">
+                    <i class="fas fa-wallet mr-1.5 text-red-600/50 md:hidden"></i>Biaya
+                </a>
+                <a href="#syarat" class="text-slate-600 hover:text-red-600 flex items-center shrink-0">
+                    <i class="fas fa-file-signature mr-1.5 text-red-600/50 md:hidden"></i>Syarat
+                </a>
+                <a href="#aturan" class="text-slate-600 hover:text-red-600 flex items-center shrink-0">
+                    <i class="fas fa-gavel mr-1.5 text-red-600/50 md:hidden"></i>Aturan 
+                </a>
+                <a href="#data-pemilih" class="text-slate-600 hover:text-red-600 flex items-center shrink-0">
+                    <i class="fas fa-chart-bar mr-1.5 text-red-600/50 md:hidden"></i>Data Pemilih
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+
+<style>
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+
+    <header class="hero-gradient h-[60vh] flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-4xl">
+            <p class="text-red-500 font-bold tracking-[0.3em] uppercase mb-4 text-shadow">Pemilihan Ketua RT & RW 01</p>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight uppercase">Suara Warga, <br><span class="text-red-500">Masa Depan Bersama</span></h1>
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-semibold tracking-widest opacity-80 uppercase">
+                <span>Demokrasi</span> • <span>Kebersamaan</span> • <span>Kejujuran</span>
+            </div>
+        </div>
+    </header>
+
+         <main class="container mx-auto px-6 -mt-20 relative z-10 pb-10 space-y-8">
+
+        <section id="jadwal">
+            <div class="text-center mb-10 bg-white p-8 rounded-3xl shadow-xl max-w-2xl mx-auto border-t-4 border-red-600">
+                <h2 class="text-2xl font-extrabold text-slate-800 uppercase tracking-tight">Tahapan Pelaksanaan</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-5 gap-4">
+                <div class="bg-white p-6 rounded-3xl shadow-lg text-center card-hover border-b-4 border-slate-200">
+                    <div class="w-12 h-12 bg-slate-50 text-slate-600 rounded-xl flex items-center justify-center mx-auto mb-4 text-lg font-bold">01</div>
+                    <h3 class="font-bold text-sm mb-2 uppercase">Pendaftaran</h3>
+                    <p class="text-slate-500 text-[11px] leading-relaxed">01 - 10 Jan 2026<br>08:00 - 23:59 WIB</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl shadow-lg text-center card-hover border-b-4 border-blue-500">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4 text-lg font-bold">02</div>
+                    <h3 class="font-bold text-sm mb-2 uppercase">Verifikasi & Undian No Urut calon</h3>
+                    <p class="text-slate-500 text-[11px] leading-relaxed">11 Jan 2026<br>Sekretariat Kantor RW 01</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl shadow-lg text-center card-hover border-b-4 border-green-500">
+                    <div class="w-12 h-12 bg-green-50 text-green-600 rounded-xl flex items-center justify-center mx-auto mb-4 text-lg font-bold">03</div>
+                    <h3 class="font-bold text-sm mb-2 uppercase">Sosialisasi & Kampanye</h3>
+                    <p class="text-slate-500 text-[11px] leading-relaxed">12 - 21 Jan 2026<br>Kampanye Visi & Misi</p>
+                </div>
+
+                <div class="bg-orange-50 p-6 rounded-3xl shadow-lg text-center card-hover border-b-4 border-orange-500">
+                    <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-volume-mute"></i></div>
+                    <h3 class="font-bold text-sm mb-2 uppercase text-orange-700">Masa Tenang</h3>
+                    <p class="text-orange-600 text-[10px] leading-tight font-medium italic">22 - 31 Jan 2026<br>Dilarang Sosialisasi/Kampanye</p>
+                </div>
+
+                <div class="bg-red-600 p-6 rounded-3xl shadow-xl text-center card-hover border-b-4 border-red-800 text-white scale-105">
+                    <div class="w-12 h-12 bg-white/20 text-white rounded-xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-vote-yea"></i></div>
+                    <h3 class="font-bold text-sm mb-2 uppercase">PEMILIHAN</h3>
+                    <p class="text-[11px] leading-relaxed font-bold">Minggu, 1 Feb 2026<br>07:00 - Selesai</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="panitia">
+            <h2 class="text-3xl font-extrabold text-center mb-16 uppercase tracking-tighter">Struktur Panitia</h2>
+            
+            <div class="grid md:grid-cols-3 gap-10 mb-20">
+                <div class="text-center group">
+                    <div class="relative inline-block mb-6">
+                        <div class="w-44 h-44 rounded-full border-4 border-white shadow-xl overflow-hidden bg-slate-200">
+                            <img src="foto-ketua.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-red-600 text-white text-[10px] px-4 py-1 rounded-full font-bold uppercase tracking-widest shadow-lg">Ketua</div>
+                    </div>
+                    <h4 class="font-bold text-xl uppercase">Dedi Junaedi</h4>
+                </div>
+                <div class="text-center group">
+                    <div class="relative inline-block mb-6">
+                        <div class="w-44 h-44 rounded-full border-4 border-white shadow-xl overflow-hidden bg-slate-200">
+                            <img src="foto-sekretaris.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-[10px] px-4 py-1 rounded-full font-bold uppercase tracking-widest shadow-lg">Sekretaris</div>
+                    </div>
+                    <h4 class="font-bold text-xl uppercase">Hesti Nuraeni</h4>
+                </div>
+                <div class="text-center group">
+                    <div class="relative inline-block mb-6">
+                        <div class="w-44 h-44 rounded-full border-4 border-white shadow-xl overflow-hidden bg-slate-200">
+                            <img src="foto-bendahara.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-[10px] px-4 py-1 rounded-full font-bold uppercase tracking-widest shadow-lg">Bendahara</div>
+                    </div>
+                    <h4 class="font-bold text-xl uppercase">Khofifah Munjiah</h4>
+                </div>
+            </div>
+
+            <div class="pt-16 border-t border-slate-200">
+                <p class="text-center text-xs font-bold text-slate-400 uppercase tracking-[0.3em] mb-12">Anggota Panitia</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="text-center"><img src="foto-anggota1.jpeg" class="w-24 h-24 rounded-2xl mx-auto mb-4 object-cover shadow-md border-2 border-white"><p class="font-bold text-sm uppercase">Iis Dwi Isnaeni</p></div>
+                    <div class="text-center"><img src="foto-anggota2.jpeg" class="w-24 h-24 rounded-2xl mx-auto mb-4 object-cover shadow-md border-2 border-white"><p class="font-bold text-sm uppercase">Amelia Anjani</p></div>
+                    <div class="text-center"><img src="foto-anggota3.jpg" class="w-24 h-24 rounded-2xl mx-auto mb-4 object-cover shadow-md border-2 border-white"><p class="font-bold text-sm uppercase leading-tight">Oscar Yunianto</p></div>
+                    <div class="text-center"><img src="foto-anggota3.jpg" class="w-24 h-24 rounded-2xl mx-auto mb-4 object-cover shadow-md border-2 border-white"><p class="font-bold text-sm uppercase">Diaz</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="biaya" class="bg-[#0a1d14] rounded-[40px] p-12 text-white overflow-hidden relative shadow-2xl">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-green-600/10 rounded-full -mr-32 -mt-32"></div>
+            <div class="relative z-10 text-center">
+                <h2 class="text-3xl font-extrabold mb-10 uppercase italic tracking-wider text-green-400">Iuran Operasional</h2>
+                <div class="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+                    <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20">
+                        <p class="text-xs font-bold text-slate-400 uppercase mb-2">Calon Ketua RT</p>
+                        <p class="text-4xl font-black">Rp400.000</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20">
+                        <p class="text-xs font-bold text-slate-400 uppercase mb-2">Calon Ketua RW</p>
+                        <p class="text-4xl font-black">Rp800.000</p>
+                    </div>
+                </div>
+                <p class="mt-8 text-sm text-slate-500 italic font-medium max-w-lg mx-auto">* Dana digunakan untuk keperluan operasional TPS, perlengkapan pemilihan, serta honorarium petugas lapangan.</p>
+            </div>
+        </section>
+
+<section id="syarat" class="space-y-12">
+            <div class="text-center bg-white p-8 rounded-3xl shadow-xl max-w-2xl mx-auto border-t-4 border-red-600">
+                <h2 class="text-2xl font-extrabold text-slate-800 uppercase tracking-tight">Syarat & Pendaftaran</h2>
+                <p class="text-xs font-bold text-slate-400 mt-2 uppercase tracking-widest">Calon Ketua RT & RW 01</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-[40px] shadow-[0_10px_30px_rgba(16,185,129,0.15)] border border-slate-100">
+                    <h3 class="text-lg font-black mb-6 flex items-center text-slate-800">
+                        <span class="w-8 h-8 bg-red-100 text-red-600 rounded-lg flex items-center justify-center mr-3 text-sm">01</span>
+                        SYARAT UMUM
+                    </h3>
+                    <ul class="space-y-4 text-sm font-semibold text-slate-600">
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Bertaqwa kepada Tuhan Yang Maha Esa (Allah SWT).</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Setia & taat kepada Negara, Pemerintah, dan UUD 1945.</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Berkelakuan baik, jujur, adil, cerdas, dan berwibawa.</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Sehat jasmani dan rohani.</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>WNI (Warga Negara Indonesia) minimal usia 21 tahun.</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Warga lokal min. 6 bulan berturut-turut atau terdaftar dalam KK RT 01/02/RW 01.</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Memiliki kemauan, kemampuan kepemimpinan, peka, & peduli sosial.</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i>Pendidikan minimal SMP atau sederajat.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-900 p-8 rounded-[40px] shadow-2xl text-white relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16"></div>
+                    <h3 class="text-lg font-black mb-6 flex items-center">
+                        <span class="w-8 h-8 bg-green-500 text-white rounded-lg flex items-center justify-center mr-3 text-sm">02</span>
+                        SYARAT ADMINISTRATIF
+                    </h3>
+                    <div class="grid grid-cols-1 gap-3">
+                        <div class="flex items-center p-3 bg-white/10 rounded-xl border border-white/10 text-xs font-bold">
+                            <i class="fas fa-file-alt mr-3 text-green-400"></i> Mengisi Formulir Pendaftaran
+                        </div>
+                        <div class="flex items-center p-3 bg-white/10 rounded-xl border border-white/10 text-xs font-bold">
+                            <i class="fas fa-graduation-cap mr-3 text-green-400"></i> Fotocopy Ijazah Min SMP/Sederajat
+                        </div>
+                        <div class="flex items-center p-3 bg-white/10 rounded-xl border border-white/10 text-xs font-bold">
+                            <i class="fas fa-id-card mr-3 text-green-400"></i> Fotocopy KTP & KK
+                        </div>
+                        <div class="flex items-center p-3 bg-white/10 rounded-xl border border-white/10 text-xs font-bold">
+                            <i class="fas fa-users-cog mr-3 text-green-400"></i> Surat Persetujuan Keluarga/Suami/Istri
+                        </div>
+                        <div class="flex items-center p-3 bg-white/10 rounded-xl border border-white/10 text-xs font-bold">
+                            <i class="fas fa-heartbeat mr-3 text-green-400"></i> Surat Keterangan Sehat (Puskesmas/Klinik)
+                        </div>
+                        <div class="flex items-center p-3 bg-white/10 rounded-xl border border-white/10 text-xs font-bold">
+                            <i class="fas fa-image mr-3 text-green-400"></i> Pas Photo Latar Merah 4x6 (2 Lembar)
+                        </div>
+                        <div class="flex items-center p-3 bg-white/10 rounded-xl border border-white/10 text-xs font-bold">
+                            <i class="fas fa-shield-alt mr-3 text-green-400"></i> Fotocopy SKCK
+                        </div>
+                        <div class="flex items-center p-3 bg-white/10 rounded-xl border border-white/10 text-xs font-bold">
+                            <i class="fas fa-user-shield mr-3 text-green-400"></i> Surat Mandat Penunjukan Saksi
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-3xl shadow-md border border-slate-100 flex flex-col md:flex-row items-center justify-between max-w-4xl mx-auto space-y-4 md:space-y-0">
+                <div class="text-center md:text-left">
+                    <p class="text-xs font-black text-red-600 uppercase tracking-widest">Sudah Memenuhi Syarat?</p>
+                    <p class="text-sm font-bold text-slate-500">Silakan hubungi penanggung jawab pendaftaran berikut:</p>
+                </div>
+                <div class="flex space-x-3">
+                    <a href="https://wa.me/6281221518489" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-xl font-bold text-[10px] flex items-center shadow-lg transition">
+                        <i class="fab fa-whatsapp mr-2 text-lg"></i> RT 01 - Iis Dwi Isnaeni
+                    </a>
+                    <a href="https://wa.me/6288802153726" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-xl font-bold text-[10px] flex items-center shadow-lg transition">
+                        <i class="fab fa-whatsapp mr-2 text-lg"></i> RT 02 - Hesti Nuraeni
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="aturan" class="bg-white p-10 rounded-[40px] shadow-sm border relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-2 h-full bg-red-600"></div>
+            <h2 class="text-2xl font-black mb-8 border-b pb-4 uppercase tracking-tighter">Dasar Hukum & Tata Tertib</h2>
+            <div class="grid md:grid-cols-2 gap-8 text-sm leading-relaxed text-slate-600 font-medium">
+                <div class="space-y-4">
+                    <p> <i class="fas fa-university mr-2 text-red-600"></i>
+                        <strong class="text-slate-900">Landasan Hukum:</strong> 
+                        Perwal Kota Cimahi No. 53 Th 2021  Bab V Pasal 54 & 55 tentang Kepengurusan RT/RW.
+                        <a href="https://drive.google.com/file/d/1rZJZMyoYcffFrhQDeyMg5khfbaraWiOI/view?usp=sharing" target="_blank" class="inline-flex items-center ml-2 px-3 py-1 bg-red-50 text-red-600 text-[10px] font-bold rounded-lg border border-red-100 hover:bg-red-600 hover:text-white transition shadow-sm">
+                        <i class="fas fa-download mr-1"></i> Lihat Dokumen
+                        </a>
+                    </p>
+                    <p><i class="fas fa-ban mr-2 text-red-600"></i><strong class="text-slate-900">Larangan:</strong> Dilarang melakukan kampanye terselubung atau politik uang (Money Politic).</p>
+                </div>
+                <div class="space-y-4">
+                    <p><i class="fas fa-trophy mr-2 text-green-600"></i><strong class="text-slate-900">Kriteria Kemenangan:</strong> Ditentukan melalui perolehan suara terbanyak sah dalam satu putaran.</p>
+                    <p><i class="fas fa-users mr-2 text-blue-600"></i><strong class="text-slate-900">Hak Pilih:</strong> Warga usia 17+ atau sudah menikah dan terdaftar dalam DPT RW 01.</p>
+                </div>
+            </div>
+            <div class="mt-8 p-6 bg-slate-50 rounded-2xl border-l-4 border-blue-600 italic text-xs leading-relaxed text-slate-500 font-semibold">
+                "Apabila dalam penjaringan calon hanya terdapat satu calon, maka akan disahkan secara aklamasi melalui musyawarah mufakat dengan tanda tangan 40 KK atau lebih untuk RT, dan 100 KK untuk RW."
+            </div>
+        </section>
+
+     <section id="data-pemilih" class="py-2">
+    <div class="text-center mb-10 bg-white p-8 rounded-3xl shadow-xl max-w-2xl mx-auto border-t-4 border-blue-600">
+        <h2 class="text-2xl font-extrabold text-slate-800 uppercase tracking-tight">Statistik Pemilih</h2>
+        <p class="text-[10px] font-bold text-slate-400 mt-2 uppercase tracking-widest">Berdasarkan Jenis Kelamin & Wilayah</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+        <div class="space-y-4">
+            <div class="bg-white p-6 rounded-3xl shadow-sm border-l-4 border-blue-500">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="text-[10px] font-bold text-slate-400 uppercase">Laki-Laki</p>
+                        <p class="text-2xl font-black text-slate-800">325</p>
+                    </div>
+                    <i class="fas fa-mars text-blue-200 text-3xl"></i>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-3xl shadow-sm border-l-4 border-pink-500">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="text-[10px] font-bold text-slate-400 uppercase">Perempuan</p>
+                        <p class="text-2xl font-black text-slate-800">317</p>
+                    </div>
+                    <i class="fas fa-venus text-pink-200 text-3xl"></i>
+                </div>
+            </div>
+            <div class="bg-slate-900 p-6 rounded-3xl shadow-lg text-white">
+                <p class="text-[10px] font-bold opacity-60 uppercase">Total DPT RW 01</p>
+                <p class="text-3xl font-black text-green-400"> 642<span class="text-sm font-normal text-white">Jiwa</span></p>
+            </div>
+        </div>
+
+        <div class="md:col-span-2 bg-white p-6 md:p-8 rounded-[40px] shadow-sm border border-slate-100">
+            <canvas id="chartDPTGender" height="220"></canvas>
+        </div>
+    </div>
+</section>
+
+<script>
+    const ctxGender = document.getElementById('chartDPTGender').getContext('2d');
+    new Chart(ctxGender, {
+        type: 'bar',
+        data: {
+            labels: ['RT 01', 'RT 02'],
+            datasets: [
+                {
+                    label: 'Laki-laki',
+                    data: [125, 200], // Dummy Data RT 01 & RT 02
+                    backgroundColor: '#3b82f6', // Biru
+                    borderRadius: 8,
+                    barPercentage: 0.8,
+                    categoryPercentage: 0.6
+                },
+                {
+                    label: 'Perempuan',
+                    data: [123, 194], // Dummy Data RT 01 & RT 02
+                    backgroundColor: '#ec4899', // Pink
+                    borderRadius: 8,
+                    barPercentage: 0.8,
+                    categoryPercentage: 0.6
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'top',
+                    labels: {
+                        usePointStyle: true,
+                        font: { size: 11, weight: 'bold', family: 'Plus Jakarta Sans' }
+                    }
+                },
+                tooltip: {
+                    backgroundColor: '#0f172a',
+                    padding: 12,
+                    titleFont: { size: 14 },
+                    bodyFont: { size: 13 },
+                    displayColors: false
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    border: { display: false },
+                    grid: { color: '#f1f5f9' },
+                    ticks: { font: { size: 10 } }
+                },
+                x: {
+                    border: { display: false },
+                    grid: { display: false },
+                    ticks: { font: { size: 12, weight: 'bold' } }
+                }
+            }
+        }
+    });
+</script>
+
+    </main>
+
+    <footer class="bg-[#0a1d14] text-white pt-24 pb-12 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
+            <div class="absolute top-10 left-10 w-32 h-32 border-4 border-white rounded-full"></div>
+            <div class="absolute bottom-10 right-10 w-64 h-64 border-[16px] border-green-600 rounded-full"></div>
+            <div class="absolute top-1/2 left-1/4 grid grid-cols-4 gap-2">
+                <div class="w-1 h-1 bg-white rounded-full"></div><div class="w-1 h-1 bg-white rounded-full"></div><div class="w-1 h-1 bg-white rounded-full"></div><div class="w-1 h-1 bg-white rounded-full"></div>
+                <div class="w-1 h-1 bg-white rounded-full"></div><div class="w-1 h-1 bg-white rounded-full"></div><div class="w-1 h-1 bg-white rounded-full"></div><div class="w-1 h-1 bg-white rounded-full"></div>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center mb-20">
+                <div class="inline-block relative">
+                    <i class="fas fa-quote-left text-5xl text-green-500 absolute -top-10 -left-12 opacity-50"></i>
+                    <h2 class="text-2xl md:text-4xl font-extrabold italic leading-tight tracking-tight">
+                        "Blok Mancong Bersatu, Jujur, Adil, <br class="hidden md:block"> Transparan & Rahasia"
+                    </h2>
+                    <i class="fas fa-quote-right text-5xl text-red-500 absolute -bottom-10 -right-12 opacity-50"></i>
+                </div>
+                
+                <div class="flex justify-center items-center mt-12 space-x-2">
+                    <div class="h-1.5 w-16 bg-red-600 rounded-full"></div>
+                    <div class="h-1.5 w-32 bg-white rounded-full"></div>
+                    <div class="h-1.5 w-16 bg-green-600 rounded-full"></div>
+                </div>
+            </div>
+
+        <div class="flex flex-col md:flex-row justify-between items-center border-t border-white/10 pt-12">
+            <div class="text-center md:text-left mb-8 md:mb-0">
+                <div class="flex items-center justify-center md:justify-start space-x-4 mb-4">
+                    <img src="Logo_tps_muda_2026.png" alt="Logo TPS Muda" class="h-14 w-auto object-contain"> 
+                    <div class="text-left">
+                        <span class="block font-black text-xl tracking-tighter uppercase leading-none text-white">TPS<span class="text-red-600">MUDA</span></span>
+                        <span class="text-[9px] font-bold text-slate-400 tracking-[0.2em] uppercase">Panitia Pemilihan RW 01</span>
+                    </div>
+                </div>
+                <p class="text-[10px] text-slate-400 font-bold uppercase tracking-[0.3em]">
+                    Hak Cipta &copy; 2026 Panitia Pemilihan Blok Mancong
+                </p>
+            </div>
+
+                <div class="flex space-x-4">
+                    <a href="#" class="w-12 h-12 bg-white/5 hover:bg-red-600 rounded-full flex items-center justify-center transition-all duration-300 border border-white/10 hover:border-red-600 group">
+                        <i class="fab fa-facebook-f group-hover:scale-110"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 bg-white/5 hover:bg-blue-400 rounded-full flex items-center justify-center transition-all duration-300 border border-white/10 hover:border-blue-400 group">
+                        <i class="fab fa-twitter group-hover:scale-110"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 bg-white/5 hover:bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 rounded-full flex items-center justify-center transition-all duration-300 border border-white/10 group">
+                        <i class="fab fa-instagram group-hover:scale-110"></i>
+                    </a>
+                    <a href="https://wa.me/6288802153726" class="w-12 h-12 bg-white/5 hover:bg-green-600 rounded-full flex items-center justify-center transition-all duration-300 border border-white/10 hover:border-green-600 group">
+                        <i class="fab fa-whatsapp group-hover:scale-110 text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <span class="text-[9px] bg-white/5 px-4 py-2 rounded-full text-slate-500 font-bold uppercase tracking-widest border border-white/5">
+                    Kelurahan Melong • Cimahi Selatan • Kota Cimahi
+                </span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
