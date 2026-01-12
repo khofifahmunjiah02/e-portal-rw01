@@ -39,6 +39,9 @@
     <div class="border-t border-slate-100 bg-slate-50 md:bg-white">
         <div class="container mx-auto">
             <div class="flex overflow-x-auto no-scrollbar py-3 px-4 space-x-6 md:justify-center font-bold text-[10px] md:text-xs uppercase tracking-widest whitespace-nowrap">
+               <a href="#calon" class="text-slate-600 hover:text-red-600 flex items-center shrink-0">
+                    <i class="fas fa-user-tie mr-1.5 text-red-600/50 md:hidden"></i>Calon
+                </a>
                 <a href="#jadwal" class="text-slate-600 hover:text-red-600 flex items-center shrink-0">
                     <i class="fas fa-calendar-alt mr-1.5 text-red-600/50 md:hidden"></i>Jadwal
                 </a>
@@ -120,6 +123,86 @@
                     <div class="w-12 h-12 bg-white/20 text-white rounded-xl flex items-center justify-center mx-auto mb-4"><i class="fas fa-vote-yea"></i></div>
                     <h3 class="font-bold text-sm mb-2 uppercase">PEMILIHAN</h3>
                     <p class="text-[11px] leading-relaxed font-bold">Minggu, 25 Januari 2026<br>Proses Pencoblosan 07:00 - 13.00 <br>Proses Perhitungan 14:00 - Selesai</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="calon" class="py-12 bg-slate-50">
+            <div class="text-center mb-10 bg-white p-8 rounded-3xl shadow-xl max-w-2xl mx-auto border-t-4 border-blue-600">
+                <h2 class="text-2xl font-extrabold text-slate-800 uppercase tracking-tight">Daftar Calon Ketua RW & RT</h2>
+                <p class="text-slate-500 text-sm mt-2">Klik foto calon untuk melihat Visi & Misi</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-2 mb-10 px-4">
+                <button onclick="filterCalon('semua', this)" class="btn-filter bg-blue-600 text-white px-5 py-2 rounded-full font-bold text-[10px] shadow-md transition-all">SEMUA</button>
+                <button onclick="filterCalon('rw', this)" class="btn-filter bg-white text-slate-600 px-5 py-2 rounded-full font-bold text-[10px] shadow-md transition-all">RW 01</button>
+                <button onclick="filterCalon('rt01', this)" class="btn-filter bg-white text-slate-600 px-5 py-2 rounded-full font-bold text-[10px] shadow-md transition-all">RT 01</button>
+                <button onclick="filterCalon('rt02', this)" class="btn-filter bg-white text-slate-600 px-5 py-2 rounded-full font-bold text-[10px] shadow-md transition-all">RT 02</button>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 px-4 max-w-6xl mx-auto">
+                
+                <div class="card-calon rw bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100 cursor-pointer transition transform hover:scale-105" 
+                    onclick="openModal('AKKEU JANUAR', '1', 'Calon RW 01', 'akkeu_januar1.jpeg', 'Membentuk kepemimpinan yang bermanfaat untuk masyarakat, bukan memanfaatkan yang ada di masyarakat.', ['Mewujudkan kualitas pelayanan publik (Tartib Administrasi)', 'Mencipkatakan tata kelola keuangan yang transparan', 'Meningkatkan Kepedulian sosial dalam masyarakat'])">
+                    <div class="relative bg-slate-200 aspect-square overflow-hidden">
+                    <img src="akkeu_januar1.jpeg" alt="Calon" class="w-full h-full object-top object-cover">
+                    <div class="absolute top-2 left-2 bg-blue-600 text-white px-2 py-0.5 rounded-full text-[8px] font-bold">RW 01</div>
+                    </div>
+                    <div class="p-3 md:p-6 text-center">
+                        <h3 class="font-bold text-sm md:text-xl text-slate-800 leading-tight">AKKEU JANUAR</h3>
+                        <p class="text-blue-600 font-bold text-[10px] md:text-xs uppercase">No.1</p>
+                    </div>
+                </div>
+
+                
+                <div class="card-calon rw bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100 cursor-pointer transition transform hover:scale-105" 
+                    onclick="openModal('AHMAD SOPANDI', '2', 'Calon RW 01', 'ahmad_sopandi.jpeg', 'Melanjutkan program kepengurusan sebelumnya untuk tata kelola wilayah 01 ruang lingkup RW 01.', ['Melayani dan mengayomi masyarakat yang berdomisili di wilayah RW 01 Blok Mancong'])">
+                    <div class="relative bg-slate-200 aspect-square overflow-hidden">
+                    <img src="ahmad_sopandi.jpeg" alt="Calon" class="w-full h-full object-top object-cover">
+                    <div class="absolute top-2 left-2 bg-blue-600 text-white px-2 py-0.5 rounded-full text-[8px] font-bold">RW 01</div>
+                    </div>
+                    <div class="p-3 md:p-6 text-center">
+                        <h3 class="font-bold text-sm md:text-xl text-slate-800 leading-tight">AHMAD SOPANDI</h3>
+                        <p class="text-blue-600 font-bold text-[10px] md:text-xs uppercase">No.2</p>
+                    </div>
+                </div>
+
+
+                <div class="card-calon rw bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100 cursor-pointer transition transform hover:scale-105" 
+                    onclick="openModal('DEDI (oded)', '3', 'Calon RW 01', 'dedi_oded.jpeg', 'Menjadikan lingkungan RW 01 Blok Mancong, yang bersih, amanah, terbuka, transparansi serta bertanggung jawab dan religius.', ['Memberikan layanan yang terbaik kepada warga RW 01 ', 'Memperdayakan peran aktif warga dalam kegiatan sosial', 'Mengembangkan potensi SDM warga 01, transparansi keuangan dalam segala aspek'])">
+                    <div class="relative bg-slate-200 aspect-square overflow-hidden">
+                    <img src="dedi_oded.jpeg" alt="Calon" class="w-full h-full object-top object-cover">
+                    <div class="absolute top-2 left-2 bg-blue-600 text-white px-2 py-0.5 rounded-full text-[8px] font-bold">RW 01</div>
+                    </div>
+                    <div class="p-3 md:p-6 text-center">
+                        <h3 class="font-bold text-sm md:text-xl text-slate-800 leading-tight">DEDI (oded)</h3>
+                        <p class="text-blue-600 font-bold text-[10px] md:text-xs uppercase">No.3</p>
+                    </div>
+                </div>
+
+
+                <div class="card-calon rt01 bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100 cursor-pointer transition transform hover:scale-105"
+                    onclick="openModal('JAELANI', 'WILAYAH 01', 'Calon RT 01', 'jaelani.jpeg', 'Menjadikan kampung Mancong lebih baik harmonis dan tertata Insya Allah', ['Melanjutkan pembangunan / program pemerintah yang terbuka Insya Allah'])">
+                    <div class="relative bg-slate-200 aspect-square overflow-hidden">
+                        <img src="jaelani.jpeg" alt="Calon" class="w-full h-full object-top object-cover">
+                        <div class="absolute top-2 left-2 bg-green-600 text-white px-2 py-0.5 rounded-full text-[8px] font-bold">RT 01</div>
+                    </div>
+                    <div class="p-3 md:p-6 text-center">
+                        <h3 class="font-bold text-sm md:text-xl text-slate-800 leading-tight">JAELANI</h3>
+                        <p class="text-green-600 font-bold text-[10px] md:text-xs uppercase"></p>
+                    </div>
+                </div>
+
+                <div class="card-calon rt02 bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100 cursor-pointer transition transform hover:scale-105" 
+                    onclick="openModal('CEP AHMAD', 'WILAYAH 02', 'Calon RT 02', 'cep_ahmad.jpeg', 'Saya punya pandangan kedepan gambaran impian untuk jangka panjang. Saya ingin menghidupkan kembali kegiatan-kegiatan dimasyarakat. Contoh, ingin menghidupkan kembali kepemudaan.', ['Cara saya menghidupkan kegiatan kepemudaan dengan dibentuk wadah yaitu karang taruna'])">
+                    <div class="relative bg-slate-200 aspect-square overflow-hidden">
+                        <img src="cep_ahmad.jpeg" alt="Calon" class="w-full h-full object-top object-cover">
+                        <div class="absolute top-2 left-2 bg-purple-600 text-white px-2 py-0.5 rounded-full text-[8px] font-bold">RT 02</div>
+                    </div>
+                    <div class="p-3 md:p-6 text-center">
+                        <h3 class="font-bold text-sm md:text-xl text-slate-800 leading-tight">CEP AHMAD</h3>
+                        <p class="text-purple-600 font-bold text-[10px] md:text-xs uppercase"></p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -456,9 +539,93 @@
         </div>
     </footer>
 
-</body>
+    <script>
+        // Fungsi Filter (Sudah disempurnakan)
+    function filterCalon(kategori, element) {
+    const buttons = document.querySelectorAll('.btn-filter');
+    buttons.forEach(btn => {
+        btn.classList.remove('bg-blue-600', 'text-white');
+        btn.classList.add('bg-white', 'text-slate-600');
+    });
+    element.classList.remove('bg-white', 'text-slate-600');
+    element.classList.add('bg-blue-600', 'text-white');
 
+    const cards = document.querySelectorAll('.card-calon');
+    cards.forEach(card => {
+        if (kategori === 'semua') {
+            card.classList.remove('hidden');
+        } else {
+            if (card.classList.contains(kategori)) {
+                card.classList.remove('hidden');
+            } else {
+                card.classList.add('hidden');
+            }
+        }
+    });
+}
+
+// Fungsi Modal
+function openModal(nama, noUrut, jabatan, foto, visi, misi) {
+    const modal = document.getElementById('modalCalon');
+    const content = document.getElementById('modalContent');
+    const misiList = misi.map(item => `<li>${item}</li>`).join('');
+
+    content.innerHTML = `
+        <div class="w-full bg-slate-100 flex justify-center">
+            <img src="${foto}" class="max-w-full max-h-[400px] object-contain">
+        </div>
+        
+        <div class="p-6 md:p-8">
+            <div class="mb-4">
+                <p class="text-blue-600 font-bold text-xs uppercase tracking-widest mb-1">${jabatan}</p>
+                <h2 class="text-slate-800 text-2xl font-black leading-tight">${nama}</h2>
+                <div class="mt-2 inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-bold text-xs">
+                    NOMOR ${noUrut}
+                </div>
+            </div>
+
+            <hr class="mb-6 border-slate-100">
+
+            <div class="space-y-6">
+                <div>
+                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Visi</h4>
+                    <p class="text-slate-700 italic text-sm md:text-base leading-relaxed">"${visi}"</p>
+                </div>
+                <div>
+                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Misi</h4>
+                    <ul class="text-slate-600 text-sm list-disc ml-5 space-y-2 leading-relaxed">
+                        ${misiList}
+                    </ul>
+                </div>
+            </div>
+            
+            <button onclick="closeModal()" class="w-full mt-8 bg-slate-800 text-white py-3 rounded-xl font-bold hover:bg-slate-700 transition-all shadow-lg">
+                Tutup Detail
+            </button>
+        </div>
+    `;
+
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    const modal = document.getElementById('modalCalon');
+    modal.classList.add('hidden');
+    document.body.style.overflow = 'auto'; // Aktifkan kembali scroll
+}
+
+// Tutup modal jika klik di luar area modal
+window.onclick = function(event) {
+    const modal = document.getElementById('modalCalon');
+    if (event.target == modal) {
+        closeModal();
+    }
+}
+    </script>
+</body>
 </html>
+
 
 
 
