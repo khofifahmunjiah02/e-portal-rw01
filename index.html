@@ -438,7 +438,7 @@ new Chart(ctxFinal, {
                 '#cbd5e1', // Abu-abu Terang (Calon 3)
                 '#f87171'  // Merah (Tidak Sah)
             ],
-            hoverOffset: 20, 
+            hoverOffset: 20, // Efek membesar saat disentuh dibuat lebih tegas
             borderWidth: 0
         }]
     },
@@ -455,12 +455,12 @@ new Chart(ctxFinal, {
                 }
             },
             tooltip: {
-                backgroundColor: '#0f172a', 
+                backgroundColor: '#0f172a', // Warna gelap agar premium
                 padding: 15,
                 titleFont: { size: 14 },
                 bodyFont: { size: 13 },
                 callbacks: {
-                    
+                    // Menampilkan format persen saat kursor diarahkan ke grafik
                     label: function(context) {
                         let label = context.label || '';
                         let value = context.parsed || 0;
@@ -469,7 +469,8 @@ new Chart(ctxFinal, {
                 }
             }
         },
-        cutout: '75%', 
+        cutout: '75%', // Lubang tengah dibuat lebih lebar agar terlihat modern
+    }
 });
 </script>
 
@@ -477,8 +478,8 @@ new Chart(ctxFinal, {
 <script>
   // Inisialisasi AOS
   AOS.init({
-    duration: 1000, 
-    once: true,     
+    duration: 1000, // Kecepatan muncul (1 detik)
+    once: true,     // Animasi hanya jalan sekali saat scroll pertama
   });
 </script>
 
